@@ -22,7 +22,7 @@ public class Game {
     private boolean flipLC = false;
     private boolean flipRC = false;
     private List<GameListener> listeners;
-    
+
     public Game(List<Player> players) {
         this.players = players;
         listeners = new ArrayList<>();

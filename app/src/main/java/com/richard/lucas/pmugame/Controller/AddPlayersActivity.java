@@ -1,18 +1,20 @@
 package com.richard.lucas.pmugame.Controller;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ListView;
 
 import com.richard.lucas.pmugame.R;
 
-public class MainActivity extends AppCompatActivity {
+public class AddPlayersActivity extends AppCompatActivity {
+    private ListView lvPlayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_players);
 
-        startActivity(new Intent(this, AddPlayersActivity.class));
+        lvPlayers = (ListView)findViewById(R.id.lvPlayers);
+
     }
 }
