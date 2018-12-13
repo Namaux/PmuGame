@@ -1,205 +1,775 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:id="@+id/pmuLayout"
+    android:background="@color/White"
+
     >
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/cardUp"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/banana_yellow"
+        android:layout_below="@id/cardUpLayout"
         >
 
-        <TextView
-            android:id="@+id/numberCardUp"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textSize="12sp"
-            android:text="Carte 1"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/card_draw"
+            >
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="110dp"
+            android:src="@drawable/card_draw"
             />
+        </RelativeLayout>
 
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/historyCase1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/banana_yellow"
-        >
-
-        <TextView
-            android:id="@+id/historyCase1Text"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:textColor="@color/Black"
-            android:textSize="12sp"
-            android:text="Carte 1"
-            />
+            android:layout_alignParentRight="true"
+            >
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/arrow"
+                android:background="@color/White"
+                />
+        </RelativeLayout>
 
+    </RelativeLayout>
 
-    </LinearLayout>
+    <!--
+    *************************************************************
+    =============================================================
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase2"
-        android:background="@color/warm_grey"
+                            Middle card
+
+    =============================================================
+    *************************************************************
+    -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
         >
 
-        <TextView
-            android:id="@+id/historyCase2Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Carte 2"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
+        <!--
+        *************************************************************
+        =============================================================
 
-    </LinearLayout>
+                                Card diamond 0 => 5
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase3"
-        android:background="@color/cornflower_blue_65"
-        >
+        =============================================================
+        *************************************************************
+        -->
 
-        <TextView
-            android:id="@+id/historyCase3Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Carte 3"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase4"
-        android:background="@color/light_sage"
-        >
-
-        <TextView
-            android:id="@+id/historyCase4Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="carte 4"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase5"
-        >
-
-        <TextView
-            android:id="@+id/historyCase5Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Il y a trois jours"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
-
-        <ImageButton
-            android:id="@+id/historyCase5Btn"
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/banana_yellow"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            />
+            android:layout_height="wrap_content"
+            android:id="@+id/diamondLayout"
+            >
 
-    </LinearLayout>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond5"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase6"
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond4"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardDiamond5"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond3"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_below="@+id/cardDiamond4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond2"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardDiamond3"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/empty_card"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardDiamond2"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardDiamond"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/diamond_ace"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardDiamond1"
+                >
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--
+            *************************************************************
+            =============================================================
+
+                                    Card heart 0 => 5
+
+            =============================================================
+            *************************************************************
+            -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/diamondLayout"
+            android:id="@+id/heartLayout"
+
+            >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart5"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart4"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardHeart5"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart3"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardHeart4"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart2"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardHeart3"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardHeart2"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardHeart"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/heart_ace"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardHeart1"
+                >
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!--
+            *************************************************************
+            =============================================================
+
+                                    Card Club 0 => 5
+
+            =============================================================
+            *************************************************************
+            -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/heartLayout"
+            android:id="@+id/clubLayout"
+            >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub5"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub4"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardClub5"
+
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub3"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardClub4"
+
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub2"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardClub3"
+
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardClub2"
+
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardClub"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/club_ace"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardClub1"
+                >
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!--
+           *************************************************************
+           =============================================================
+
+                                   Card Club 0 => 5
+
+           =============================================================
+           *************************************************************
+           -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/clubLayout"
+            android:id="@+id/spadeLayout"
+            >
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade5"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade4"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardSpade5"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade3"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardSpade4"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade2"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardSpade3"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade1"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/empty_card"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardSpade2"
+                >
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/cardSpade"
+                android:layout_width="50dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/spade_ace"
+                android:orientation="vertical"
+                android:layout_below="@+id/cardSpade1"
+                >
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <!--
+    *************************************************************
+    =============================================================
+
+                            Card up 0 => 5
+
+    =============================================================
+    *************************************************************
+    -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/cardUpLayout"
         >
 
-        <TextView
-            android:id="@+id/historyCase6Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Avant-hier"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
 
-        <ImageButton
-            android:id="@+id/historyCase6Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/banana_yellow"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardUp1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/numberCardUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="carte up"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:id="@+id/historyCase7"
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp1"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardUp2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/up_card"
+            android:orientation="vertical">
+
+
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp2"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardUp3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/up_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp3"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardUp4"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/up_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp4"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardUp5"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/up_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardUp5"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/up_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--
+        *************************************************************
+        =============================================================
+
+                                Card down 0 => 5
+
+        =============================================================
+        *************************************************************
+        -->
+
+    <RelativeLayout
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         >
 
-        <TextView
-            android:id="@+id/historyCase7Text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="Hier"
-            android:textColor="@color/Black"
-            android:layout_marginLeft="5dp"
-            />
 
-        <ImageButton
-            android:id="@+id/historyCase7Btn"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/banana_yellow"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
-            />
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardDown1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/numberCardDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="carte Down"
+                android:textColor="@color/Black"
+                android:textSize="12sp" />
 
-</LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown1"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardDown2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown2"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardDown3"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown3"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardDown4"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown4"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/cardDown5"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/cardDown5"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/down_card"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
